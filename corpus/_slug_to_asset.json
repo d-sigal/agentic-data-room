@@ -1,0 +1,126 @@
+{
+  "slugs": {
+    "overview-pitch-deck": {
+      "title": "Series B Pitch Deck",
+      "filename": "Series B Pitch Deck.pdf",
+      "drive_id": null,
+      "mime_type": "application/pdf",
+      "serve_as": "pdf",
+      "local_path": "Overview/Series B Pitch Deck.pdf",
+      "file_id": "local_T3ZlcnZpZXcvU2VyaWVzIEIgUGl0Y2ggRGVjay5wZGY"
+    },
+    "overview-investor-memo": {
+      "title": "Investor Memo (October 2026)",
+      "filename": "Investor Memo.pdf",
+      "drive_id": null,
+      "mime_type": "application/vnd.google-apps.document",
+      "serve_as": "pdf",
+      "local_path": "Overview/Investor Memo.pdf",
+      "file_id": "local_T3ZlcnZpZXcvSW52ZXN0b3IgTWVtby5wZGY"
+    },
+    "acquisition-overview": {
+      "title": "Go-to-Market Overview",
+      "filename": "Go-to-Market Overview.pdf",
+      "drive_id": null,
+      "mime_type": "application/vnd.google-apps.document",
+      "serve_as": "pdf",
+      "local_path": "Acquisition/Go-to-Market Overview.pdf",
+      "file_id": "local_QWNxdWlzaXRpb24vR28tdG8tTWFya2V0IE92ZXJ2aWV3LnBkZg"
+    },
+    "acquisition-partners": {
+      "title": "Distribution and Carrier Partners",
+      "filename": "Distribution and Carrier Partners.pdf",
+      "drive_id": null,
+      "mime_type": "application/vnd.google-apps.document",
+      "serve_as": "pdf",
+      "local_path": "Acquisition/Distribution and Carrier Partners.pdf",
+      "file_id": "local_QWNxdWlzaXRpb24vRGlzdHJpYnV0aW9uIGFuZCBDYXJyaWVyIFBhcnRuZXJzLnBkZg"
+    },
+    "product-overview": {
+      "title": "Product Overview",
+      "filename": "Product Overview.pdf",
+      "drive_id": null,
+      "mime_type": "application/vnd.google-apps.document",
+      "serve_as": "pdf",
+      "local_path": "Product/Product Overview.pdf",
+      "file_id": "local_UHJvZHVjdC9Qcm9kdWN0IE92ZXJ2aWV3LnBkZg"
+    },
+    "product-pricing-sheet-2024": {
+      "title": "Pricing Sheet (2024, superseded)",
+      "filename": "Pricing Sheet 2024.pdf",
+      "drive_id": null,
+      "mime_type": "application/vnd.google-apps.document",
+      "serve_as": "pdf",
+      "local_path": "Product/Pricing Sheet 2024.pdf",
+      "file_id": "local_UHJvZHVjdC9QcmljaW5nIFNoZWV0IDIwMjQucGRm"
+    },
+    "product-competitive-landscape": {
+      "title": "Competitive Landscape",
+      "filename": "Competitive Landscape.pdf",
+      "drive_id": null,
+      "mime_type": "application/vnd.google-apps.document",
+      "serve_as": "pdf",
+      "local_path": "Product/Competitive Landscape.pdf",
+      "file_id": "local_UHJvZHVjdC9Db21wZXRpdGl2ZSBMYW5kc2NhcGUucGRm"
+    },
+    "finance-financial-model": {
+      "title": "Financial Model (v12)",
+      "filename": "financial_model.xlsx",
+      "drive_id": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "serve_as": "xlsx",
+      "local_path": "Finance/financial_model.xlsx",
+      "file_id": "local_RmluYW5jZS9maW5hbmNpYWxfbW9kZWwueGxzeA"
+    },
+    "finance-cap-table": {
+      "title": "Cap Table (September 2026)",
+      "filename": "Cap Table.xlsx",
+      "drive_id": null,
+      "mime_type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+      "serve_as": "xlsx",
+      "local_path": "Finance/Cap Table.xlsx",
+      "file_id": "local_RmluYW5jZS9DYXAgVGFibGUueGxzeA"
+    },
+    "finance-kpis": {
+      "title": "Key Metrics (Q3 2026)",
+      "filename": "Key Metrics Q3 2026.pdf",
+      "drive_id": null,
+      "mime_type": "application/vnd.google-apps.document",
+      "serve_as": "pdf",
+      "local_path": "Finance/Key Metrics Q3 2026.pdf",
+      "file_id": "local_RmluYW5jZS9LZXkgTWV0cmljcyBRMyAyMDI2LnBkZg"
+    }
+  },
+  "legal_docs": {
+    "contract-partner-yuber": {
+      "title": "Distribution Agreement: Yuber",
+      "filename": "contract-partner-yuber.pdf",
+      "category": "acquisition",
+      "drive_id": null,
+      "mime_type": "application/pdf",
+      "serve_as": "pdf",
+      "local_path": "Legal/contract-partner-yuber.pdf",
+      "file_id": "local_TGVnYWwvY29udHJhY3QtcGFydG5lci15dWJlci5wZGY"
+    },
+    "contract-carrier-alpha": {
+      "title": "Carrier Capacity Agreement: Alpha Mutual",
+      "filename": "contract-carrier-alpha.pdf",
+      "category": "acquisition",
+      "drive_id": null,
+      "mime_type": "application/pdf",
+      "serve_as": "pdf",
+      "local_path": "Legal/contract-carrier-alpha.pdf",
+      "file_id": "local_TGVnYWwvY29udHJhY3QtY2Fycmllci1hbHBoYS5wZGY"
+    },
+    "governance-corporate-structure": {
+      "title": "Corporate Structure Chart",
+      "filename": "governance-corporate-structure.pdf",
+      "category": "governance",
+      "drive_id": null,
+      "mime_type": "application/pdf",
+      "serve_as": "pdf",
+      "local_path": "Legal/governance-corporate-structure.pdf",
+      "file_id": "local_TGVnYWwvZ292ZXJuYW5jZS1jb3Jwb3JhdGUtc3RydWN0dXJlLnBkZg"
+    }
+  }
+}

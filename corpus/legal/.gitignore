@@ -1,0 +1,5 @@
+# Keep real contracts out of git. The three sample PDFs are whitelisted.
+*.pdf
+!contract-partner-yuber.pdf
+!contract-carrier-alpha.pdf
+!governance-corporate-structure.pdf

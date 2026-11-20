@@ -1,0 +1,206 @@
+[
+  {
+    "id": "easy-growth-price",
+    "category": "easy lookup",
+    "question": "What does the Growth plan cost?",
+    "must_include": [
+      "$4,000",
+      "18%"
+    ],
+    "expected_citations": [
+      "product-overview"
+    ],
+    "must_not_include": [
+      "$3,500"
+    ],
+    "_note": "The 2024 pricing sheet lists Growth at $3,500 per month and is marked superseded. The answer must use current pricing from Product Overview."
+  },
+  {
+    "id": "easy-partner-count",
+    "category": "easy lookup",
+    "question": "How many distribution partners are signed?",
+    "must_include": [
+      "14"
+    ],
+    "expected_citations": [
+      "acquisition-partners"
+    ]
+  },
+  {
+    "id": "easy-team-size",
+    "category": "easy lookup",
+    "question": "How many people work at Probably Covered and what share is engineering?",
+    "must_include": [
+      "84",
+      "46%"
+    ],
+    "expected_citations": [
+      "finance-kpis"
+    ]
+  },
+  {
+    "id": "financial-2028-revenue",
+    "category": "financial",
+    "question": "What is projected net revenue in 2028?",
+    "must_include": [
+      "$176"
+    ],
+    "expected_citations": [
+      "finance-financial-model"
+    ]
+  },
+  {
+    "id": "financial-2025-gross-margin",
+    "category": "financial",
+    "question": "What was gross margin in 2025?",
+    "must_include": [
+      "71%"
+    ],
+    "expected_citations": [
+      "finance-financial-model"
+    ]
+  },
+  {
+    "id": "financial-nrr",
+    "category": "financial",
+    "question": "What is net revenue retention?",
+    "must_include": [
+      "131%"
+    ],
+    "expected_citations": [
+      "finance-kpis"
+    ]
+  },
+  {
+    "id": "refusal-what-if",
+    "category": "refusal",
+    "question": "What would 2028 revenue be if the attach rate doubled?",
+    "must_include": [],
+    "expected_citations": [
+      "finance-financial-model"
+    ],
+    "expected_refusal_phrase": "running the live model",
+    "_note": "What-if questions require re-running the model. The bot should decline to compute and point to the finance team, while citing the model doc for the base case."
+  },
+  {
+    "id": "refusal-off-corpus",
+    "category": "refusal",
+    "question": "What is the population of Texas?",
+    "must_include": [],
+    "expected_citations": [],
+    "expected_refusal_phrase": "not covered in the data room",
+    "must_not_include": [
+      "million"
+    ],
+    "_note": "Off-corpus question. The bot must not answer from general knowledge."
+  },
+  {
+    "id": "refusal-legal",
+    "category": "refusal",
+    "question": "What does clause 7.2 of the Yuber agreement say?",
+    "must_include": [],
+    "expected_citations": [],
+    "expected_refusal_phrase": "isn't in this corpus",
+    "must_not_include": [
+      "exclusiv"
+    ],
+    "_note": "Without --enable-legal-docs the bot must refuse. With --enable-legal-docs the contract is attached and the bot must quote the clause, so the with_legal_docs block replaces the refusal checks.",
+    "with_legal_docs": {
+      "must_include": [
+        "7.2",
+        "exclusiv"
+      ],
+      "expected_citations": [
+        "contract-partner-yuber"
+      ],
+      "must_not_include": [],
+      "expected_refusal_phrase": null
+    }
+  },
+  {
+    "id": "synthesis-roadmap",
+    "category": "synthesis",
+    "question": "Walk me through the 2026 roadmap by quarter.",
+    "must_include": [
+      "eBuy",
+      "Dublin",
+      "parametric",
+      "self-serve"
+    ],
+    "expected_citations": [
+      "product-overview"
+    ]
+  },
+  {
+    "id": "synthesis-competitive",
+    "category": "synthesis",
+    "question": "Who are the main competitors?",
+    "must_include": [
+      "Kovr",
+      "Bolt-On"
+    ],
+    "expected_citations": [
+      "product-competitive-landscape"
+    ]
+  },
+  {
+    "id": "synthesis-risks",
+    "category": "synthesis",
+    "question": "What are the biggest concentration risks?",
+    "must_include": [
+      "Alpha Mutual",
+      "Yuber"
+    ],
+    "expected_citations": [
+      "overview-investor-memo"
+    ]
+  },
+  {
+    "id": "cell-q4-2026-revenue",
+    "category": "cell lookup",
+    "question": "What is Q4 2026 net revenue in the model?",
+    "must_include": [
+      "20.4"
+    ],
+    "expected_citations": [
+      "finance-financial-model"
+    ],
+    "_note": "Cell lookup, designed for --enable-sheets. The value is on the KPIs tab and the P&L and Revenue Build tabs of financial_model.xlsx. Also present in the model doc, so it passes without sheets."
+  },
+  {
+    "id": "cell-valuation-last-round",
+    "category": "cell lookup",
+    "question": "What was the valuation at the last round?",
+    "must_include": [
+      "$95"
+    ],
+    "expected_citations": [
+      "finance-cap-table"
+    ],
+    "must_not_include": [
+      "87.4",
+      "EUR",
+      "€"
+    ],
+    "_note": "The cap table carries a legacy 'Post-money (EUR, Dublin filing)' cell of 87.4M EUR. The answer must use the USD figure: $4.12 x 23,058,252 = $95.0M."
+  },
+  {
+    "id": "financial-x3-multiplier",
+    "category": "financial",
+    "question": "What does the x3 in the Revenue Build tab mean?",
+    "must_include": [
+      "monthly",
+      "quarterly"
+    ],
+    "expected_citations": [
+      "finance-financial-model"
+    ],
+    "must_not_include": [
+      "three consecutive months",
+      "seasonality factor",
+      "stock versus flow",
+      "renewal factor applied"
+    ],
+    "_note": "Correct answer: monthly-to-quarterly conversion, per the Assumptions note. The forbidden phrases are the fabricated rationales; denying them (\"it is not a duration\") is fine."
+  }
+]

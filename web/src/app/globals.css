@@ -1,0 +1,356 @@
+/* ==========================================================================
+   Colors & Type Tokens
+   --------------------------------------------------------------------------
+   Default palette. Swap these tokens for your own brand. All colors taken verbatim
+   (top-usage palette in METADATA.md). Typography substitutes commercial
+   faces with Google Font matches — see README.md "Type substitutions".
+   ========================================================================== */
+
+/* ---- Brand fonts (licensed — shipped from /fonts) ---------------- */
+:root {
+  /* --------------------------------------------------------------------
+     CORE PALETTE
+     -------------------------------------------------------------------- */
+  /* Primary ink — a warm, desaturated near-black used for nearly all text
+     and strokes. Pairs with the cream background to avoid pure-black glare. */
+  --dr-ink:        rgb(48, 44, 46);       /* Soft black — 821× in figma */
+  --dr-ink-hex:    #302C2E;
+
+  /* Secondary/disabled ink */
+  --dr-ink-mid:    rgb(100, 97, 98);      /* used in disabled/meta text */
+  --dr-ink-soft:   rgb(151, 149, 150);    /* placeholders, strokes, de-emphasised */
+
+  /* Surfaces — the brand's signature "paper cream" */
+  --dr-cream:      rgb(240, 233, 222);    /* Primary canvas background */
+  --dr-cream-soft: rgb(244, 239, 230);    /* Card / nested surface */
+  --dr-cream-deep: rgb(250, 245, 238);    /* Alt section surface */
+  --dr-bone:       rgb(221, 215, 219);    /* Dividers, inert chips */
+  --dr-bone-warm:  rgb(210, 205, 200);    /* Progress bar empty state */
+
+  --dr-white:      rgb(255, 255, 255);
+  --dr-black:      rgb(0, 0, 0);
+
+  /* --------------------------------------------------------------------
+     ACCENT PALETTE
+     CTA chevrons, collage shapes, value-prop illustration accents.
+     Used sparingly — usually ONE big accent per screen/section.
+     -------------------------------------------------------------------- */
+  --dr-orange:     rgb(255, 146, 73);     /* Primary CTA chevron, "Protect" illustration */
+  --dr-peach:      rgb(246, 170, 116);
+  --dr-peach-lt:   rgb(250, 199, 164);
+  --dr-blush:      rgb(254, 215, 215);    /* tag pill fill */
+  --dr-pink:       rgb(255, 155, 188);    /* "Pay" illustration, feature accent */
+  --dr-maroon:     rgb(142, 1, 1);        /* warning text / hot tag */
+  --dr-red:        rgb(186, 38, 38);      /* error */
+  --dr-olive:      rgb(108, 128, 75);     /* "Persevere" illustration */
+  --dr-olive-dk:   rgb(23, 83, 2);
+  --dr-teal:       rgb(130, 173, 174);    /* collage shape accent */
+  --dr-teal-dk:    rgb(127, 143, 143);
+  --dr-teal-2:     rgb(0, 187, 167);      /* brighter teal from Prospect Flow */
+  --dr-teal-deep:  rgb(21, 95, 96);       /* deep teal — CTA alt, editorial */
+
+  /* Success / positive — introduced in Prospect Flow plan cards */
+  --dr-success:    rgb(0, 182, 122);      /* included-check pill, Partner badge */
+  --dr-success-dk: rgb(21, 95, 96);       /* success label on cream */
+  --dr-link:       rgb(140, 116, 14);     /* "View more" links, chevron detail */
+  --dr-link-soft:  rgb(246, 236, 194);    /* mustard Notice banner bg */
+
+  /* Prospect-flow surfaces */
+  --dr-surface-card:   rgb(255, 255, 255); /* plan/quote card — paper white */
+  --dr-surface-stroke: rgb(210, 205, 200); /* 1px warm grey card border */
+  --dr-surface-notice: rgb(225, 232, 229); /* soft sage notice */
+  --dr-chip-warn-bg:   rgb(255, 240, 229); /* Expires chip bg */
+  --dr-chip-warn-fg:   rgb(224, 90, 0);    /* Expires chip fg — production (#e05a00) */
+  --dr-danger-pill:    rgb(186, 38, 38);   /* "not covered" X pill */
+
+  /* --------------------------------------------------------------------
+     BRAND TOKENS (swap for your own palette)
+     Exact Tailwind tokens from the live codebase — use these for
+     pixel parity with the main product.
+     -------------------------------------------------------------------- */
+  --dr-soft-black:        oklch(0.2981 0.0068 345.73); /* primary text — warmer than #302C2E */
+  --dr-soft-black-hex:    #2F2A2C;                     /* approx. sRGB value */
+  --dr-soft-black-500:    rgba(47, 42, 44, 0.5);       /* used on input borders / line-through prices */
+  --dr-soft-black-700:    rgba(47, 42, 44, 0.7);
+  --dr-green-30:          #CEE8DA;   /* pale-mint fill — "one-time payment" block */
+  --dr-soft-white:        #F7F3EC;   /* nested surface inside cards (add-on med panels) */
+  --dr-soft-white-alt:    #F4EFE6;   /* editorial surface — trust strip, founder card */
+  --dr-trustpilot:        #00B67A;   /* Trustpilot-green — "Worth $" + core procedure checks */
+  --dr-blue:              #A8D4E0;   /* pale-blue guarantee seal fill */
+  --dr-orange-warn:       #E05A00;   /* expires-chip fg, notification accents */
+  --dr-orange-warn-bg:    #FFF0E5;   /* expires-chip bg */
+  --dr-pink-bar:          #FF9BBC;   /* savings-chart darkest segment */
+  --dr-pink-bar-soft:     #FFC7D9;   /* savings-chart mid segment */
+  --dr-amber-video-tint:  rgba(255, 225, 182, 0.4); /* video-thumb color wash */
+
+  /* --------------------------------------------------------------------
+     SEMANTIC
+     -------------------------------------------------------------------- */
+  --color-bg:         var(--dr-cream);
+  --color-surface:    var(--dr-cream-soft);
+  --color-surface-2:  var(--dr-cream-deep);
+  --color-surface-3:  var(--dr-white);
+
+  --color-fg:         var(--dr-ink);
+  --color-fg-muted:   var(--dr-ink-mid);
+  --color-fg-soft:    var(--dr-ink-soft);
+  --color-fg-inverse: var(--dr-cream);
+
+  --color-border:     var(--dr-ink);           /* crisp ink hairlines */
+  --color-border-soft:var(--dr-ink-soft);
+  --color-divider:    var(--dr-bone);
+
+  --color-accent:       var(--dr-orange);
+  --color-accent-fg:    var(--dr-ink);         /* label sits on orange */
+  --color-danger:       var(--dr-red);
+  --color-danger-soft:  rgb(254, 215, 215);
+  --color-success:      var(--dr-olive);
+
+  /* --------------------------------------------------------------------
+     TYPOGRAPHY
+     -------------------------------------------------------------------- */
+  /* Brand faces first, defensive fallbacks behind */
+  --font-serif:  'ABC Arizona Text', 'Newsreader', Georgia, serif;
+  --font-sans:   'Suisse Int\'l', 'Geist', ui-sans-serif, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-mono:   'Suisse Int\'l Mono', 'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  /* Monospace is an identity element — used for ALL CTA labels, section
+     eyebrows, and numeric values. Never plain body. */
+
+  /* Type scale (px at 1rem=16px). Matches Tailwind defaults used in figma. */
+  --text-xs:   12px;   --leading-xs:   1.4;
+  --text-sm:   13px;   --leading-sm:   1.2;    /* mono eyebrow */
+  --text-base: 16px;   --leading-base: 1.4;    /* body */
+  --text-md:   18px;   --leading-md:   1.3;
+  --text-lg:   20px;   --leading-lg:   1.2;    /* mono "$" */
+  --text-xl:   24px;   --leading-xl:   1.2;
+  --text-2xl:  30px;   --leading-2xl:  1.2;
+  --text-3xl:  36px;   --leading-3xl:  1.1;
+  --text-4xl:  40px;   --leading-4xl:  0.95;   /* question titles in onboarding */
+  --text-5xl:  52px;   --leading-5xl:  1.0;
+  --text-6xl:  56px;   --leading-6xl:  1.0;    /* hero / cover */
+  --text-hero: 92px;   --leading-hero: 0.95;   /* biggest editorial moments */
+
+  --tracking-mono:     0.08em;   /* distinctive mono uppercase spacing */
+  --tracking-tight:    -0.01em;  /* display serif */
+  --tracking-normal:   0em;
+
+  /* --------------------------------------------------------------------
+     RADIUS / BORDERS / ELEVATION
+     -------------------------------------------------------------------- */
+  --radius-none: 0;
+  --radius-xs:   3px;    /* inputs, most cards */
+  --radius-sm:   5px;    /* nested panels */
+  --radius-md:   8px;
+  --radius-pill: 999px;
+
+  --border-hair: 0.5px solid var(--dr-ink);  /* signature hairline */
+  --border-1:    1px solid var(--dr-ink);
+  --border-dashed-accent: 1px dashed rgb(151, 71, 255);  /* editor-only */
+
+  /* Almost no shadows. Use sparingly. */
+  --shadow-sm:  0 1px 2px rgba(0,0,0,0.04), 0 1px 1px rgba(0,0,0,0.04);
+  --shadow-md:  0 4px 8px rgba(0,0,0,0.06);
+  --shadow-lg:  0 10px 24px rgba(0,0,0,0.08);
+
+  /* --------------------------------------------------------------------
+     SPACING (Tailwind-compatible scale from Misc/Spacing frame)
+     -------------------------------------------------------------------- */
+  --space-0:  0;
+  --space-1:  0.25rem;   /* 4 */
+  --space-2:  0.5rem;    /* 8 */
+  --space-3:  0.75rem;   /* 12 */
+  --space-4:  1rem;      /* 16 */
+  --space-5:  1.25rem;   /* 20 */
+  --space-6:  1.5rem;    /* 24 */
+  --space-7:  1.75rem;   /* 28 */
+  --space-8:  2rem;      /* 32 */
+  --space-10: 2.5rem;    /* 40 */
+  --space-12: 3rem;      /* 48 */
+  --space-16: 4rem;      /* 64 */
+  --space-20: 5rem;      /* 80 */
+  --space-24: 6rem;      /* 96 */
+
+  /* --------------------------------------------------------------------
+     MOTION
+     -------------------------------------------------------------------- */
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  --ease-enter:    cubic-bezier(0, 0, 0.2, 1);
+  --ease-exit:     cubic-bezier(0.4, 0, 1, 1);
+  --dur-fast:   120ms;
+  --dur-base:   200ms;
+  --dur-slow:   400ms;
+}
+
+/* ==========================================================================
+   SEMANTIC TEXT ELEMENTS
+   Import this file and use .g-h1 / .g-eyebrow / etc as ready-made styles.
+   ========================================================================== */
+
+.g-hero, .g-h1, .g-h2, .g-h3, .g-h4 {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  color: var(--color-fg);
+  letter-spacing: var(--tracking-tight);
+  font-feature-settings: "ss01";
+  text-wrap: balance;
+}
+
+.g-hero { font-size: var(--text-hero); line-height: var(--leading-hero); }
+.g-h1   { font-size: var(--text-5xl);  line-height: var(--leading-5xl); }
+.g-h2   { font-size: var(--text-4xl);  line-height: var(--leading-4xl); }
+.g-h3   { font-size: var(--text-3xl);  line-height: var(--leading-3xl); }
+.g-h4   { font-size: var(--text-xl);   line-height: var(--leading-xl);  font-weight: 600; }
+
+.g-eyebrow,
+.g-mono-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  line-height: var(--leading-sm);
+  letter-spacing: var(--tracking-mono);
+  color: var(--color-fg);
+  text-transform: none;  /* mono is already low-contrast uppercase-feel */
+}
+
+.g-mono-cta {
+  font-family: var(--font-mono);
+  font-size: var(--text-base);
+  line-height: 1.2;
+  letter-spacing: var(--tracking-mono);
+}
+
+.g-p {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--leading-base);
+  color: var(--color-fg);
+}
+
+.g-p-lg { font-size: var(--text-md); line-height: 1.45; }
+.g-p-sm { font-size: var(--text-sm); line-height: 1.4; color: var(--color-fg-muted); }
+
+.g-label {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: var(--text-base);
+  line-height: var(--leading-base);
+  color: var(--color-fg);
+}
+
+.g-caption {
+  font-family: var(--font-sans);
+  font-size: var(--text-xs);
+  line-height: 1.4;
+  color: var(--color-fg-muted);
+}
+
+/* ==========================================================================
+   BASELINE ELEMENTS (opt-in via .dr-root)
+   ========================================================================== */
+.dr-root,
+.dr-root * {
+  box-sizing: border-box;
+}
+
+.dr-root {
+  background: var(--color-bg);
+  color: var(--color-fg);
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: var(--leading-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.dr-root h1 { @extend .g-h1; }
+.dr-root h2 { @extend .g-h2; }
+.dr-root h3 { @extend .g-h3; }
+.dr-root h4 { @extend .g-h4; }
+.dr-root p  { @extend .g-p;  }
+
+/* ── App-level resets & animations ──────────────────────────── */
+html, body { margin: 0; padding: 0; height: 100%; }
+body { background: var(--dr-cream); font-family: var(--font-sans); color: var(--dr-ink); -webkit-font-smoothing: antialiased; }
+* { box-sizing: border-box; }
+
+@keyframes fadeBg   { from { opacity: 0; } to { opacity: 1; } }
+@keyframes slideIn  { from { transform: translateX(20px); opacity: 0; } to { transform: none; opacity: 1; } }
+@keyframes gdrFadeUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+@keyframes spin { to { transform: rotate(360deg); } }
+@keyframes gdrDot {
+  0%, 80%, 100% { opacity: 0.25; transform: scale(0.8); }
+  40%           { opacity: 1;    transform: scale(1); }
+}
+
+/* ── Mobile-friendly touch targets ─────────────────────────── */
+@media (pointer: coarse) {
+  button, a, [role="button"] {
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+/* ── Prevent iOS bounce / zoom on inputs ──────────────────── */
+@media screen and (max-width: 768px) {
+  input, textarea, select {
+    font-size: 16px !important; /* prevents iOS auto-zoom */
+  }
+  /* Horizontal scroll for data tables */
+  .table-scroll-wrap {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+::-webkit-scrollbar       { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--dr-bone-warm); border-radius: 999px; }
+::-webkit-scrollbar-thumb:hover { background: var(--dr-ink-soft); }
+
+.prose-block p  { margin: 0 0 1em; }
+.prose-block p:last-child { margin-bottom: 0; }
+.prose-block strong { font-weight: 600; }
+.prose-block ul, .prose-block ol { margin: 0 0 1em; padding-left: 1.4em; }
+.prose-block li { margin-bottom: 0.25em; }
+.prose-block hr { border: none; border-top: 0.5px solid var(--dr-bone); margin: 1em 0; }
+.prose-block table { border-collapse: collapse; width: 100%; margin: 0 0 1em; font-size: 14px; }
+.prose-block th { text-align: left; padding: 10px 14px; font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--dr-ink-mid); background: var(--dr-cream-soft); border-bottom: 0.5px solid var(--dr-ink); font-weight: 400; }
+.prose-block td { padding: 12px 14px; border-bottom: 0.5px solid var(--dr-bone); }
+.prose-block tr:last-child td { border-bottom: none; }
+.prose-block table { border: 0.5px solid var(--dr-ink); border-radius: 3px; overflow: hidden; }
+
+/* ── Citation chip tooltip ─────────────────────────────────────── */
+.cite-wrap { position: relative; display: inline-flex; vertical-align: middle; }
+.cite-wrap::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 7px);
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--dr-ink);
+  color: var(--dr-cream);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  line-height: 1.3;
+  white-space: nowrap;
+  padding: 5px 9px;
+  border-radius: 3px;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 120ms;
+  z-index: 50;
+}
+.cite-wrap::before {
+  content: '';
+  position: absolute;
+  bottom: calc(100% + 1px);
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: var(--dr-ink);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 120ms;
+  z-index: 50;
+}
+.cite-wrap:hover::after,
+.cite-wrap:hover::before { opacity: 1; }

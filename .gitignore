@@ -1,0 +1,10 @@
+.env
+.venv/
+__pycache__/
+playground/eval-report-*.md
+playground/.streamlit/
+corpus/finance/sheets/
+
+.next/
+node_modules/
+.DS_Store
